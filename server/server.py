@@ -15,13 +15,19 @@ def api_main():
         lat = args["lat"]
     if "lon" in args:
         lon = args ["lon"]
-    
+    if lat == None or uid == None or lon == None:
+        return 400
     key = "AIzaSyAMCYVYNVINDg2taIs7FhlxtUKb9apJOSs"
     req_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={0},{1}&radius=10&key={2}".format(lat,lon,key)
     response = requests.get(req_url).json()
-    print(response["results"])
-    return response#["results"]
-    #return "{},latitude = {}, longitute = {}".format(uid,lat,lon)
+    results = response["results"]
+    
+    for location in results:
+        if "business_status" in location:
+            print(location["types"])
+        
+    return response
+
     
 if __name__ == "__main__":
     app.run(debug=True)
