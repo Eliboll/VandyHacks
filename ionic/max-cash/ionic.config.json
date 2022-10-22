@@ -1,0 +1,7 @@
+{
+  "name": "MaxCash",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
