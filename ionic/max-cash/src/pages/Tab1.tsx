@@ -15,7 +15,7 @@ import {
   IonIcon,
   IonRadio,
 } from '@ionic/react';
-import { personCircle, addCircle } from 'ionicons/icons';
+import { personCircle, addCircle, card } from 'ionicons/icons';
 
 import './Tab1.css';
 
@@ -40,21 +40,20 @@ function Tab1() {
           </IonFabButton>
           <IonModal id="example-modal" ref={modal} trigger="open-custom-dialog">
             <div className="wrapper">
-              <h1>Dialog header</h1>
+              <h1>Add a card</h1>
           
               <IonList lines="none">
                 <IonItem button={true} detail={false} onClick={dismiss}>
-                  <IonIcon icon={personCircle}></IonIcon>
-                  <IonLabel>Credit Card 1</IonLabel>
-                  <IonRadio slot="start" value="one" />
+                  <IonIcon icon={card}></IonIcon>
+                  <IonLabel id='1'>&nbsp;Credit Card 1</IonLabel>
                 </IonItem>
                 <IonItem button={true} detail={false} onClick={dismiss}>
-                  <IonIcon icon={personCircle}></IonIcon>
-                  <IonLabel>Item 2</IonLabel>
+                  <IonIcon icon={card}></IonIcon>
+                  <IonLabel id='2'>&nbsp;Credit Card 2</IonLabel>
                 </IonItem>
                 <IonItem button={true} detail={false} onClick={dismiss}>
-                  <IonIcon icon={personCircle}></IonIcon>
-                  <IonLabel>Item 3</IonLabel>
+                  <IonIcon icon={card}></IonIcon>
+                  <IonLabel id='3'>&nbsp;Credit Card 3</IonLabel>
                 </IonItem>
               </IonList>
             </div>
