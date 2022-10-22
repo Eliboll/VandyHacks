@@ -1,2 +1,2 @@
 # VandyHacks
-Vandyhacks hackathon
+Vandyhacks 
