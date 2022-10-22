@@ -5,7 +5,7 @@ CREATE TABLE users (
     userid INTEGER PRIMARY KEY AUTOINCREMENT,
     ccid TEXT NOT NULL,
     last_location TEXT NOT NULL,
-    phone_number TEXT NOT NULL,
+    phone_number TEXT NOT NULL
 );
 
 CREATE TABLE cards (
