@@ -40,13 +40,4 @@ function Tab2() {
   );
 }
 
-/*
-    <IonFab vertical="center" horizontal="center" slot="fixed">
-      <IonFabButton id="open-custom-dialog" onClick={() => presentToast('top')}>
-        <IonIcon icon={happy}></IonIcon>
-      </IonFabButton>
-      <IonButton expand="block" onClick={() => presentToast('top')}>Present Toast At the Top</IonButton>
-    </IonFab>
-
-*/
 export default Tab2;
