@@ -32,11 +32,18 @@ function Tab2() {
   };
 
   return (
-    <IonFab vertical="center" horizontal="center">
-      <IonFabButton onClick={() => presentToast('top')}>
-        <IonIcon icon={happy}></IonIcon>
-      </IonFabButton>
-    </IonFab>
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>MaxCash</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonFab vertical="center" horizontal="center">
+        <IonFabButton onClick={() => presentToast('top')}>
+          <IonIcon icon={happy}></IonIcon>
+        </IonFabButton>
+      </IonFab>
+    </IonPage>
   );
 }
 
