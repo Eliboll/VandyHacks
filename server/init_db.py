@@ -8,18 +8,9 @@ with open('schema.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO users (userid, ccid, last_location) VALUES (?, ?, ?)",
-            (10, "1,3,4,5,6,7,8,9", "")
+cur.execute("INSERT INTO users (userid, ccid, last_location, phone) VALUES (?, ?, ?, ?)",
+            (10, "1,3,4,5,6,7,8,9", "","6362934121")
             )
-
-cur.execute("INSERT INTO users (userid, ccid, last_location) VALUES (?, ?, ?)",
-            (19, "1,5,8", "")
-            )
-
-cur.execute("INSERT INTO users (userid, ccid, last_location) VALUES (?, ?, ?)",
-            (5, "1,3,6,9", "")
-            )
-
 cur.execute("UPDATE users SET last_location = '{}' WHERE userid={}".format("walmart",5))
 
 file = open(FILENAME, "r")
