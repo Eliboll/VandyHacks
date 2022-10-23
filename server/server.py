@@ -155,7 +155,7 @@ def api_main():
                 .create(
                      body="Use your {} card at {}".format(best_name,name),
                      from_='+13143505427',
-                     to='+16362934121'
+                     to='+1{}'.format(userEntry[0][3])
                  )
 
     print(message.sid)
