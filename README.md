@@ -1,3 +1,5 @@
+# [Max-Cash](https://devpost.com/software/max-cash)
+
 ## Inspiration
 The average American typically has about four credit cards. Each of these credit cards have differing benefits such as varying cash back rewards. It can be difficult to keep track of which credit card to use at different businesses in order to maximize cash back opportunities, which is why we created Max Cash. 
 ## What it does
