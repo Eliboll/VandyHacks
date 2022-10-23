@@ -23,7 +23,7 @@ function Tab1() {
   const modal = useRef<HTMLIonModalElement>(null);
 
   function dismiss() {
-    modal.current?.dismiss();
+    modal.current && modal.current.dismiss();
   }
 
   return (

@@ -39,11 +39,11 @@ function Tab2() {
           <IonTitle>MaxCash</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonFab vertical="center" horizontal="center">
+      {/* <IonFab vertical="center" horizontal="center">
         <IonFabButton onClick={() => presentToast('top')}>
           <IonIcon icon={happy}></IonIcon>
         </IonFabButton>
-      </IonFab>
+      </IonFab> */}
       <div className="container">
           <GeolocationButton />
       </div>
