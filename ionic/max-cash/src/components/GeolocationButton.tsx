@@ -1,5 +1,5 @@
 import { Geolocation, Position } from '@capacitor/geolocation';
-import { IonButton, IonLoading, IonToast } from '@ionic/react';
+import { IonButton, IonLoading, IonToast, useIonToast } from '@ionic/react';
 import React, { useState } from 'react';
 
 interface LocationError {
@@ -11,6 +11,15 @@ const GeolocationButton: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<LocationError>({ showError: false });
     const [position, setPosition] = useState<Position>();
+    const [present] = useIonToast();
+
+    const presentToast = (text: string) => {
+        present({
+            message: text,
+            duration: 3500,
+            position: 'top'
+        });
+    };
 
     const getLocation = async () => {
         setLoading(true);
@@ -20,9 +29,7 @@ const GeolocationButton: React.FC = () => {
             setPosition(position);
             setLoading(false);
             setError({ showError: false });
-            console.log("hello world");
             const response = await getUsers(7,(position).coords.latitude,(position).coords.longitude);
-            console.log("hello world2");
             const code = response.code;
             console.log(code);
             console.log(response);
@@ -49,8 +56,8 @@ const GeolocationButton: React.FC = () => {
                     popUpText = "An unexpected error has occured.";
                     break;
             }
-
-            
+            console.log(popUpText);
+            presentToast(popUpText);
         } catch (e) {
             if (e instanceof Error) {
                 setError({ showError: true, message: e.message });
@@ -63,7 +70,6 @@ const GeolocationButton: React.FC = () => {
         }
     }
 
-    
     
     return (
         <>
@@ -84,7 +90,7 @@ const GeolocationButton: React.FC = () => {
 };
 
 async function getUsers(uid: number, lat: number, lon: number): Promise<any> {
-    const url = `http://34.85.178.132:5000/api?uid=${uid}&lat=${lat}&lon=${lon}`;
+    const url = `https://enigmatic-retreat-48182.herokuapp.com/http://34.85.178.132:5000/api?uid=${uid}&lat=${lat}&lon=${lon}`;
     const response = await fetch(url);
     return await response.json();
 }
