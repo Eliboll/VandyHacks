@@ -17,6 +17,7 @@ import {
   IonRadio,
 } from '@ionic/react';
 import { personCircle, addCircle, happy } from 'ionicons/icons';
+import GeolocationButton from '../components/GeolocationButton';
 
 import './Tab2.css';
 
@@ -43,6 +44,9 @@ function Tab2() {
           <IonIcon icon={happy}></IonIcon>
         </IonFabButton>
       </IonFab>
+      <div className="container">
+          <GeolocationButton />
+      </div>
     </IonPage>
   );
 }
